@@ -1,0 +1,446 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Car Rent</title>
+    <link rel="stylesheet" href="style.css">
+
+</head>
+
+<script>
+    
+    function missingdata(){
+        var ok=0;
+        if(document.getElementById("name").value==""){
+            alert("Name is Missing"); ok=1;
+        }
+        if(document.getElementById("payment").value==""){
+            alert("Your Payment Method is Missing"); ok=1;
+        }
+        if(document.getElementById("Location1").value==""){
+            alert("Pickup Location is Missing"); ok=1;
+        }
+        if(document.getElementById("location2").value==""){
+            alert("Drop Off Location is Missing"); ok=1;
+        }
+        if(document.getElementById("date1").value==""){
+            alert(" Your Pickup Date is Missing "); ok=1;
+        }
+        if(document.getElementById("date2").value==""){
+            alert(" Your Drop Off Date is Missing "); ok=1;
+        }
+        if(document.getElementById("choose").value=="h"){
+            alert("Your Car is Missing "); ok=1;
+        }
+        if(document.getElementById("check").value==""){
+            alert("Do You Agree"); ok=1;
+        }
+        
+
+        if(ok==0) myFunction();
+        
+    }
+    function myFunction() {
+         alert("Your Order Has Placed successfully")
+    };
+  
+   
+
+</script>
+
+
+<body>
+
+    <form action="car-rent.php" method="post">
+
+    <!--navigation bar-->
+    
+    <table width="100%" class="nav">
+        <tr>
+            <td>
+                <td widt="25%"><a href="pro.html"><b>home</b></a></td>
+                <td widt="25%"><a href="#foot"><b>service</b></a></td>
+                <td widt="25%"><a href="#foot"><b>about</b></a></td>
+                <td widt="25%"><a href="#foot"><b>contact us</b></a></td>
+                <td widt="25%"><a href="buy.html"><b> Buy Now</b></a></td>
+                <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp;  &nbsp; </td>
+                            <td widt="25%"> &nbsp; &nbsp; &nbsp;  &nbsp;  &nbsp; </td>
+                <td widt="25%"><p>&#127757; </p></td>
+                <td widt="25%"><label for="language"><select >
+                    <option value="English">English</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="span">Spanish</option> 
+                    </select></label>
+                    <td widt="25%"><label class="filter">&#8646;</td>
+                        <td widt="25%"><label><select >
+                            <option>Filter</option>
+                            <option >All</option>
+                            <option onclick="">Sort By Price</option>
+                            <option >Sort By rating</option>
+                            </select></label> </td>
+                           
+                </td>
+                <td widt="25%"><p>&#128269;</p></td>
+                <td widt="25%"><input type="text"></td>
+            </td>
+        </tr>
+        
+    </table>
+
+    <br>
+    <br>
+    <br>
+    <br>
+    <br>
+    
+<div class="grid">
+    <!--qoutes-->
+    <div class="g1">
+        <h3 class="si1">We Make Your Drive Memorable.</h3>
+        <h5 class="si">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Let's Find a Great Deal For Your Rental Car.</h5>
+        <h5 class="si">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Select the best offer for you between all the available deals!</h5>
+        <h5 class="si">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Book Car & Enjoy Your Ride.</h5>
+
+
+    </div>
+
+    <!--textboxes-->
+    
+    <div class="g2" id="g10">
+        <table class="tg">
+
+            <!--payment , name-->
+            <tr>
+                <td>
+                    <label for="">Name:
+                        <input type="text" id="name" name="name">
+    
+                    </label>
+                </td>
+
+                <td>
+                    <label for=""> Payment Method:
+                    <select name="" id="payment">
+                    <option id="payment" value=""></option>
+                    <option id="payment" value="">Visa Card</option>
+                    <option id="payment" value="">Cash</option>
+                </select>
+            </label>  
+            </td>
+        </tr>
+
+        <!--locations-->
+            <tr>
+                <td>
+                    <label for="">Pickup Location:
+                    <input type="Text" id="Location1" name="location1">
+                </label>
+                </td>
+                <td>
+                    <label for="">Drop Off Location:
+                    <input type="Text" id="location2" name="location2">
+                </label>
+                </td>
+
+            </tr>
+
+         <!--pickup date , drop off date-->
+            <tr>    
+                <td>
+                    <label for="">Pickup Date:
+                    <input type="date" id="date1" name="date1">
+                </label>
+            </td>
+
+            <td><label for="">Drop Off Date:
+                <input type="date" id="date2" name="date2">
+            </label>
+        </td>
+            </tr>
+
+        <!--options-->
+            <tr>
+                <td>
+                    <label for=""> Choose Your Car:
+                    <select id="choose">
+
+                    <option value="h">Your Car</option>
+                    <option value="a"> Hyundai HD3</option>
+                    <option value="a">Honda Civic</option>
+                    <option value="a">Nissan Santra</option>
+                    <option value="a">Hyundai Tucson</option>
+                    <option value="a">Mitsubishi Lancer Shark</option>
+                    <option value="a"> Kia Sportage</option>
+                </select>
+            </label>  
+            </td>
+            <td>
+            <input type="checkbox" width="60px" height="40px" id="check">
+            <label for="checkbox"> I Agree</label>
+        </td>
+            </tr>
+
+        <!--table spacing-->
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+
+        <!--button and js-->
+            <tr>
+                <td colspan="2">
+                    <center>
+                    <button class="but2" onclick="missingdata()"><b>Submit</b></button>
+                </center>
+                </td>
+            </tr>
+
+        </table>
+    </form>
+    </div>
+
+    <!--image-->
+    <div class="g3">
+        <img src="images/WhatsApp Image 2023-12-11 at 18.51.52_413d6fee.jpg" height="500" width="400">
+
+    </div>
+
+</div>
+
+
+<!--rent car images-->
+
+<br>
+<div class="scroll">
+    <br>
+    
+    <div class="mySlides">
+        
+        <div class="numbertext">1 / 6</div>
+        <a href="#g10" class="imgg">
+            <img src="images/hd.jpg" alt="" width="90%" height="260" >
+            <br>
+            <h3>Hyundai Hd.</h3>
+            <h4>200$/DAY</h4>
+        </a>
+
+      </div>
+
+      <div class="mySlides">
+        
+        <div class="numbertext"> 2 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="images/honda.jpg" alt="" width="90%" height="260" >
+            <br>
+            <h3>Honda Civic.</h3>
+            <h4>100$/DAY</h4>
+        </a>
+      </div>
+
+      <div class="mySlides">
+        
+        <div class="numbertext"> 3 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="images/nissan.jpg" alt="" width="90%" height="260">
+            <br>
+            <h3>Nissan Sentra.</h3>
+            <h4>130$/DAY</h4>
+        </a>
+      </div>
+
+      <div class="mySlides">
+        
+        <div class="numbertext"> 4 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="images/tucson.jpg" alt="" width="90%" height="260" >
+            <br>
+            <h3>Hyundai Tucson.</h3>
+            <h4>500$/DAY</h4>
+        </a>
+            
+      </div>
+
+      <div class="mySlides">
+        
+        <div class="numbertext"> 5 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="images/mitsubishi.jpg" alt="" width="90%" height="260">
+            <br>
+            <h3>Mitsubishi Lancer Shark.</h3>
+            <h4>360$/DAY</h4>
+        </a>
+      </div>
+
+      <div class="mySlides">
+        
+        <div class="numbertext"> 6 / 6</div>
+        <a href="#g10" class="imgg">
+
+            <img src="images/kia.jpg" alt="" width="90%" height="260">
+            <br>
+            <h3>Kia Sportage.</h3>
+            <h4>400$/DAY</h4>
+        </a>
+      </div>
+      <a class="prev" onclick="plusSlides(-1)">❮</a>
+      <a class="next" onclick="plusSlides(1)">❯</a>
+</div>
+
+<br>
+<br>
+
+<div class="c" style="text-align: center;">
+    <span class="dot" onclick="currentSlide(1)"></span> 
+    <span class="dot" onclick="currentSlide(2)"></span> 
+    <span class="dot" onclick="currentSlide(3)"></span>
+    <span class="dot" onclick="currentSlide(4)"></span> 
+    <span class="dot" onclick="currentSlide(5)"></span> 
+    <span class="dot" onclick="currentSlide(6)"></span> 
+  </div>
+
+  <script>
+    let slideIndex = 1;
+    showSlides(slideIndex);
+    
+    function plusSlides(n) {
+      showSlides(slideIndex += n);
+    }
+    
+    function currentSlide(n) {
+      showSlides(slideIndex = n);
+    }
+    
+    function showSlides(n) {
+      let i;
+      let slides = document.getElementsByClassName("mySlides");
+      let dots = document.getElementsByClassName("dot");
+      if (n > slides.length) {slideIndex = 1}    
+      if (n < 1) {slideIndex = slides.length}
+      for (i = 0; i < slides.length; i++) {
+        slides[i].style.display = "none";  
+      }
+      for (i = 0; i < dots.length; i++) {
+        dots[i].className = dots[i].className.replace(" active", "");
+      }
+      slides[slideIndex-1].style.display = "block";  
+      dots[slideIndex-1].className += " active";
+    }
+    </script>
+
+<br>
+<br>
+
+
+
+<!--space table-->
+<table>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    
+</table>
+
+<!--space table-->
+<table>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    
+</table>
+
+<!--footer-->
+<footer class="footer" id="foot">
+    <div class="container">
+     <div class="rowf">
+       <div class="footer-col">
+         <h4>Service</h4>
+         <ul>
+           <li><a href="#">Buy now</a></li>
+           <li><a href="#">Car Rent</a></li>
+           <li><a href="#">Find Your Dream Car</a></li>
+         </ul>
+       </div>
+
+       <div class="footer-col">
+         <h4>Get Help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>About Us</h4>
+         <ul>
+           <li><a href="#">&#128241; 02554369849</a></li>
+           <li><a href="#">&#128241; 03699786516</a></li>
+           <li><a href="#">&#128231; carrent@gmail.com</a></li>
+           <li><a href="#">&#128231; dddddt@gmail.com</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col2">
+       <h4 class="socialh">follow us</h4>
+        <div class="social-links">
+            <a href="#"><img src="images/linkedin.jpg" width="40px"></a>
+            <a href="#"><img src="images/facebook.jpg" width="40px"></a>
+            <a href="#"><img src="images/tweter.jpg" width="40px" ></a>
+            <a href="#"><img src="images/insta.jpg" width="40px"></a> 
+        </div>
+      </div>
+    </div>
+   </div>
+</footer>
+
+</body>
+</html>

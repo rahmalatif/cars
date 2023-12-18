@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chechout</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<script>
+
+    function missingdata(){
+        var ok=0;
+        
+        if(document.getElementById("firstname").value==""){
+            alert("First Name is Missing"); ok=1;
+        }
+        if(document.getElementById("lastname").value==""){
+            alert("Last Name is Missing"); ok=1;
+        }
+        if(document.getElementById("nationalid").value==""){
+            alert("National ID is Missing"); ok=1;
+        }
+        if(document.getElementById("email").value==""){
+            alert("Email is Missing"); ok=1;
+        }
+        if(document.getElementById("carmodel").value==""){
+            alert("Car Model is Missing"); ok=1;
+        }
+        if(document.getElementById("color").value==""){
+            alert("Color is Missing"); ok=1;
+        }
+        if(document.getElementById("number").value==""){
+            alert("Mobile Number is Missing"); ok=1;
+        }
+        if(document.getElementById("country").value==""){
+            alert("Country is Missing"); ok=1;
+        }
+        if(document.getElementById("address").value==""){
+            alert("Address is Missing"); ok=1;
+        }
+        if(document.getElementById("namecard").value==""){
+            alert("Name Card is Missing"); ok=1;
+        }
+        if(document.getElementById("cardno").value==""){
+            alert("Credit card number is Missing"); ok=1;
+        }
+        if(document.getElementById("exp").value==""){
+            alert("Exp Month number is Missing"); ok=1;
+        }
+        if(document.getElementById("cvv").value==""){
+            alert("CVV is Missing"); ok=1;
+        }
+        if(document.getElementById("expyear").value==""){
+            alert("Exp Year is Missing"); ok=1;
+        }
+        if(document.getElementById("choose").value=="NA"){
+            alert("Your Desrie is Missing"); ok=1;
+        }
+
+        if(ok==0) myFunction();
+    }
+    
+    function myFunction() {
+        alert("Your Order Has Placed successfully")
+    };
+
+</script>
+<body>
+    
+    <form action="car-project.php" method="post" >
+
+    <!--largest table-->
+    <table>
+        <tr>
+
+        <!--navigation bar-->
+    <table width="100%" class="nav">
+        <tr>
+            <td>
+                <td widt="25%"><a href="pro.html"><b>home</b></a></td>
+                <td widt="25%"><a href="#foot"><b>service</b></a></td>
+                <td widt="25%"><a href="#foot"><b>about</b></a></td>
+                <td widt="25%"><a href="#foot"><b>contact us</b></a></td>
+                <td widt="25%"><a href="pro.html"><b> Buy Now</b></a></td>
+                <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                <td widt="25%">&nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp; &nbsp;</td>
+                <td widt="25%"><p>&#127757; </p></td>
+                <td widt="25%"><label for="language"><select >
+                    <option value="English">English</option>
+                    <option value="Arabic">Arabic</option>
+                    <option value="span">Spanish</option> 
+                    </select></label>
+                </td>
+                <td widt="25%"><p>&#128269;</p></td>
+                <td widt="25%"><input type="text"></td>
+            </td>
+        </tr>
+        
+    </table>
+        </tr>  
+        <!--space table-->
+        <table>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+      <center>
+
+        <!--personal data table-->
+       
+        <table class="buytab">
+        <tr>
+                <tr>
+                    <td class="row">
+                        <h1>Personal Details</h1>
+                    </td>
+                </tr>
+                
+        </tr>
+
+        <tr>
+            <td class="row" > First Name <br> <br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="text" id="firstname" name="firstname" ></td>
+            <td class="row" >Last Name <br> <br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="text" id="lastname" name="lastname" ></td>
+            <td class="row" >National ID<br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="number" id="nationalid" name="nationalid"></td>
+        </tr>
+
+        <tr>
+            <td class="row" >Email <br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="text" id="email" name="email"></td>
+            <td class="row" >Car Model <br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="text" id="carmodel" name="carmodel"></td>
+            <td class="row">Color <br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<label for="color" class="st">
+                <select class="st" id="color">
+                    <option value=""></option>
+                    <option value="c" >Red</option>
+                    <option value="c" >Gray</option>
+                    <option value="c" >Blue</option>
+                    <option value="c" >Black</option>
+                    <option value="c" >White</option>
+        </tr>
+
+        <tr>
+            <td class="row">Mobile Number <br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="number" id="number" name="number" ></td>
+            <td class="row">Country <br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="text"  id="country" name="country"></td>
+            <td class="row" >Address <br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="text" id="address" name="address"></td>
+        </tr>
+        
+        </table>
+
+        <!--space table-->
+        <table>
+            <tr>
+                <td>&nbsp;</td>
+            </tr>
+        </table>
+
+        <!--card data table-->
+        <table class="buytab">
+            <tr>
+                <td class="row">
+                    <h1>Payment</h1>
+                </td>
+            </tr>
+            <tr>
+                <td class="row" >Name on Card<br> <br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="text" id="namecard" name="namecard"></td>
+                <td class="row">Credit card number <br> <br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="number" id="cardno" name="cardnum"></td>
+                <td class="row">Exp Month<br><br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="date" id="exp" name="date1"></td>
+            </tr>
+            <tr>
+                <td class="row">CVV<br> <br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="number" id="cvv" name="cvv"></td>
+                <td class="row">Exp Year <br> <br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp;<input type="date" id="expyear" name="date2"></td>
+                <td class="row">Choose Your desire:<br> <br> &nbsp; &nbsp; &nbsp; &nbsp;&nbsp; &nbsp; <label for="choose" class="st">
+                    <select class="st" id="choose">
+                        <option value="NA"> Choose Your Desrie</option>
+                        <option value="rent" >Car Rent</option>
+                        <option value="Buy" >Car Buying</option>
+                    </select>
+                </label>
+            </tr>
+            <tr>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+                <td>&nbsp;</td>
+            </tr>
+            <tr>
+                <td>
+                    <input type="checkbox" class="row" width="60px" height="40px">
+                    <label for="checkbox"> I agree</label>
+                </td>
+            </tr>
+            <tr >
+                <td>&nbsp;
+                </td>
+                    <!--onclick="missingdata()"-->
+
+                <td > <button class="but"  ><b>Submit</b></button> &nbsp;</td>
+            </tr>
+          
+        </table>
+    </form>
+      </center>
+    </table>
+
+    <!--space table-->
+<table>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    <tr>
+        <td>&nbsp;</td>
+    </tr>
+    
+</table>
+
+
+<footer class="footer" id="foot">
+    <div class="container">
+     <div class="rowf">
+       <div class="footer-col">
+         <h4>Service</h4>
+         <ul>
+           <li><a href="#">Buy now</a></li>
+           <li><a href="#">Car Rent</a></li>
+           <li><a href="#">Find Your Dream Car</a></li>
+         </ul>
+       </div>
+
+       <div class="footer-col">
+         <h4>Get Help</h4>
+         <ul>
+           <li><a href="#">FAQ</a></li>
+           <li><a href="#">shipping</a></li>
+           <li><a href="#">returns</a></li>
+           <li><a href="#">order status</a></li>
+           <li><a href="#">payment options</a></li>
+         </ul>
+       </div>
+       <div class="footer-col">
+         <h4>About Us</h4>
+         <ul>
+           <li><a href="#">&#128241; 02554369849</a></li>
+           <li><a href="#">&#128241; 03699786516</a></li>
+           <li><a href="#">&#128231; carrent@gmail.com</a></li>
+           <li><a href="#">&#128231; dddddt@gmail.com</a></li>
+        </ul>
+      </div>
+      
+      <div class="footer-col2">
+       <h4 class="socialh">follow us</h4>
+        <div class="social-links">
+            <a href="#"><img src="images/linkedin.jpg" width="40px"></a>
+            <a href="#"><img src="images/facebook.jpg" width="40px"></a>
+            <a href="#"><img src="images/tweter.jpg" width="40px" ></a>
+            <a href="#"><img src="images/insta.jpg" width="40px"></a>
+        </div>
+      </div>
+    </div>
+   </div>
+</footer>
+
+</body>
+</html>
